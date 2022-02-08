@@ -18,18 +18,25 @@
     left: 0px;
 }
 
+@keyframes pounding {
+    from{font-size: 50px;}
+    to{font-size: 60px;}
+}
+
 .border-name{
-    bottom: 0;
-    right: 0;
-    margin: 10px;
+    border-radius: 10px;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
     border-style: solid;
     border-color: orange;
     width: fit-content;
     box-shadow: 3px 4px purple;
 }
 
-#name{
+.name{
     background-image: url('namebg.jpg');
     font-family: 'Supermercado One', cursive;
     color: orange;
@@ -37,23 +44,30 @@
     opacity: .8;
     text-shadow: 3px 4px purple;
     transition: 1s;
-    text-decoration: none;
+    animation-name: pounding;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-#name:hover{
-    font-size: 51px;
+.name:hover{
+    font-size: 55px;
     opacity: 1;
 }
 
 .navigation{
+    border-radius: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 105px;
     opacity: .8;
     background-image: url(namebg.jpg);
     border-style: solid;
     border-color: orange;
     box-shadow: 3px 4px purple;
-    position: fixed;
     width: 100px;
-    height: 100%;
+    height: calc(100vh - 95x);
     transition: 0.5s;
     overflow: hidden;
 }
@@ -75,10 +89,13 @@
     position: relative;
     width: 100%;
     list-style: none;
+    transition: 0.5s;
 }
 
 .navigation ul li:hover{
     background-color: purple;
+    opacity: .8;
+    border-radius: 10px;
 }
 
 .navigation ul li a{
@@ -113,4 +130,39 @@
     line-height: 60px;
     text-align: start;
     white-space: nowrap;
+}
+
+.nav-main{
+    border-radius: 10px;
+    position: fixed;
+    top: 0;
+    border-color: orange;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-style: solid;
+    box-shadow: 3px 4px purple;
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    z-index: 1000;
+    transition: 0.5s;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.nav-main:hover{
+    border-color: purple;
+    background-color: purple;
+    box-shadow: 3px 4px orange;
+}
+
+.nav-btn-toggle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: purple;
+    z-index: 1000;
 }

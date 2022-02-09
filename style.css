@@ -3,10 +3,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Supermercado One', cursive;
 }
 
-.page-bg::before {    
+.page-bg::before {
     content: "";
     background-image: url(wallpaper.jpg);
     background-size: cover;
@@ -19,62 +19,56 @@
 }
 
 @keyframes pounding {
-    from{font-size: 50px;}
-    to{font-size: 60px;}
+    from{font-size: 50px; opacity: .8;}
+    to{font-size: 51px; opacity: 1;}
 }
 
-.border-name{
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    border-style: solid;
-    border-color: orange;
-    width: fit-content;
-    box-shadow: 3px 4px purple;
+.parent-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .name{
     background-image: url('namebg.jpg');
-    font-family: 'Supermercado One', cursive;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: orange;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 3px 4px purple;
     color: orange;
     font-size: 50px;
     opacity: .8;
     text-shadow: 3px 4px purple;
-    transition: 1s;
     animation-name: pounding;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-.name:hover{
-    font-size: 55px;
-    opacity: 1;
+    cursor: pointer;
+    transition: .5s;
 }
 
 .navigation{
     border-radius: 10px;
     position: fixed;
     left: 0;
-    bottom: 0;
-    top: 105px;
+    bottom: 5px;
+    top: 110px;
     opacity: .8;
     background-image: url(namebg.jpg);
     border-style: solid;
     border-color: orange;
     box-shadow: 3px 4px purple;
     width: 100px;
-    height: calc(100vh - 95x);
     transition: 0.5s;
     overflow: hidden;
 }
 
 .navigation:hover{
-    opacity: 1;
-    width: 500px;
+    opacity: 1 !important;
+    width: 500px !important;
 }
 
 .navigation ul{
@@ -148,12 +142,6 @@
     transition: 0.5s;
     margin-bottom: 5px;
     cursor: pointer;
-}
-
-.nav-main:hover{
-    border-color: purple;
-    background-color: purple;
-    box-shadow: 3px 4px orange;
 }
 
 .nav-btn-toggle{

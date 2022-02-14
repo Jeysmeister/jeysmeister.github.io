@@ -1,47 +1,148 @@
-@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
-
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: 'Supermercado One', cursive;
 }
 
 body{
-    background-image: url(wallpaper.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: 'Supermercado One', cursive;
-    height: 100%;
-    width: 100%;
+    background-image: url("wallpaper.png");
 }
 
-.name-parent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-}
-
-.name-child{
+.nameContainer{
     position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name{
+    transition: .5s;
+    height: fit-content;
+    width: fit-content;
+    font-size: 4vmax;
+    padding: 1%;
     border-style: solid;
     border-color: orange;
     border-radius: 10px;
-    font-size: 100px;
-    padding: 10px;
-    width: fit-content;
     color: orange;
-    cursor: pointer;
-    background-image: url(background.jpg);
-    text-shadow: 4px 4px purple;
+    background-image: url("background.jpg");
     box-shadow: 4px 4px purple;
-    animation-name: slowbeat;
-    animation-duration: 5s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+    text-shadow: 3px 3px purple;
+    cursor: pointer;
+    opacity: .8;
 }
 
-@keyframes slowbeat {
-    from{font-size: 100px;}
-    to{font-size: 105px;}
+.navContainer{
+    z-index: 1;
+    top: 3%;
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+}
+
+.navContents{
+    transition: .5s;
+    width: 7vw;
+    height: 94vh;
+    background-image: url("background.jpg");
+    border-style: solid;
+    border-color: orange;
+    box-shadow: 4px 4px purple;
+    text-shadow: 2px 2px purple;
+    border-radius: 10px;
+    opacity: .8;
+    overflow: hidden;
+}
+
+.navItem{
+    display: flex;
+    margin: 3vh 1vw;
+    color: orange;
+    font-size: 3vmax;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.navIcon{
+    margin-left: .5vw;
+    width: 20%;
+}
+
+.navName{
+    margin-left: 5vw;
+    opacity: 0;
+}
+
+.projectsContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vmax;
+}
+
+.projectsContainerChild{
+    opacity: .95;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 10px;
+    box-shadow: 4px 4px purple;
+    padding: 3vw;
+    width: fit-content;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("background.jpg");
+}
+
+.project{
+    transition: .5s;
+    margin: .5%;
+    border-style: solid;
+    border-color: orange;
+    border-radius: 10px;
+    box-shadow: 4px 4px purple;
+    background-color: white;
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+}
+
+.resumeContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume{
+    transition: .5s;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: orange;
+    box-shadow: 4px 4px purple;
+    display: inline-block;
+    height: 95%;
+    width: auto;
+    cursor: pointer;
+}
+
+.contactContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactContainerChild{
+    width: 50%;
+    height: 50%;
+    color: orange;
+    font-size: 4vmax;
 }
